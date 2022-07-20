@@ -1,0 +1,12 @@
+host: dev_env
+become: true
+
+tasks: 
+- name: start the docker container
+    docker_container:
+      name: springpetclinic
+      image: "pratimadewde/spring_project:{{ lookup('env','BUILD_NUMBER') }}"
+      state: started
+      ports:
+      - "0.0.0.0:8081:8080"
+ 

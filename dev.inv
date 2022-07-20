@@ -1,0 +1,2 @@
+[dev_env]
+175.20.20.134 ansible_user=ec2_user
